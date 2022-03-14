@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="my-css-file.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="icon" href="img/favicon.ico"> 
+    <title>My Profile Site</title>
+ </head>
+
+ <body>
+
+      <header>
+          <div class="top-container">
+              <h1 class="bound">
+                <span>W</span>
+                <span>e</span>
+                <span>l</span>
+                <span>c</span>
+                <span>o</span>
+                <span>m</span>
+                <span>e</span>
+                <span>T</span>
+                <span>o</span>
+                <span>M</span>
+                <span>y</span>
+                <span>P</span>
+                <span>r</span>
+                <span>o</span>
+                <span>f</span>
+                <span>i</span>
+                <span>l</span>
+                <span>e</span>
+              </h1>
+          </div>
+      </header>
+
+  <main>
+      <h2>私について</h2>
+          <div class="about-container">
+            <div class="my-img">
+                <img src="img/e1655f01-c1d9-46ad-b0d2-dcd389433550.jpg"
+                    alt="中村勉の写真です">
+            </div>
+            <div class="keireki">
+                <h3>～経歴～</h3> 
+                  <div class="keireki-text">
+                      <p>
+                        氏名&emsp;中村&ensp;勉&ensp;(なかむら つとむ)<br>
+                        年齢&emsp;1988年5月25日（<span data-birth="1988-05-25"></span>歳）<br>
+                        出身&emsp;京都府&ensp;のどかな町で産声をあげる<br>
+                        住所&emsp;大阪府&ensp;ものづくりが盛んな町在住<br>
+                        趣味&emsp;料理&ensp;(何かを作ることが好き)<br>
+                        <br>
+                        19歳&ensp;～飲食業に従事し、自分の店を出す事を目標に掲げる<br>
+                        27歳&ensp;～念願の居酒屋をOpen&ensp;(雇われOwner)<br>
+                        32歳&ensp;～コロナ禍により廃業し知人の運送屋でお世話になる<br>
+                        33歳&ensp;～キャリアチェンジを決意しプログラミング学習を開始する<br>
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="icon-container">
+              <div class="link-icon">
+                  <ul>
+                    <li><a href="https://www.instagram.com/tsutomu_codes/"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/ttm_0525"><i class="bi bi-twitter"></i></a></li>
+                    <li><a href="https://github.com/nakamura0525"><i class="bi bi-github"></i></a></li>
+                  </ul>
+              </div> 
+
+              <div class="skill">
+                  <h3>スキル</h3>
+                      <p>
+                        WEBサイト制作/コーディング<br>
+                        SEO対策<br>
+                        料理<br>
+                      </p>
+              </div>
+                
+              <div class="language">
+                  <h3>習得中の言語</h3>
+                      <ul>
+                        <li><i class="bi bi-filetype-html"></i></li>
+                        <li><i class="bi bi-filetype-css"></i></li>
+                        <li><i class="bi bi-filetype-js"></i></li>
+                      </ul>      
+              </div>
+          </div>  
+                  
+        <h2>お問い合わせ</h2>
+            <div class="contact"> 
+                    <form action="confirm.php" method="post">
+                      <div class="name">
+                        <label>お名前<input type="text" name="name" autocomplete="name"></label>
+                      </div>
+                      <div class="mail">
+                        <label>メール<input type="email" name="email" autocomplete="email"/></label>
+                      </div>
+                      <div class="contents">
+                        <label>メッセージ<br></label>
+                        <textarea></textarea>
+                      </div>
+                      <div class="button">
+                        <button>送信</button>
+                      </div>
+                    </form>
+            </div>         
+
+    <script>
+      (function () {
+      var today = new Date();
+      document.querySelectorAll('[data-birth]').forEach(function (element) {
+      var birth = element.getAttribute('data-birth');
+      if (birth.match(/^\d{4}(-|\/)\d{2}(-|\/)\d{2}$/)) {
+      var birthDate = new Date(birth);
+      var age = today.getFullYear() - birthDate.getFullYear();
+      var m = today.getMonth() - birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+      }
+      age = Math.max(age, 0);
+      element.innerHTML = age;
+      }
+      });
+      })();
+    </script>
+  </main>
+ </body>
+
+ <footer>
+    <p class="copyright">©&emsp;2022&emsp;Design&emsp;Tsutomu&ensp;Nakamura.</p>
+ </footer>
+
+</html>
